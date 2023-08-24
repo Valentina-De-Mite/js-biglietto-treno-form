@@ -27,43 +27,56 @@ Questo richiederà un minimo di ricerca.
 
 // chiedo i km del viaggio
 
-const userName = prompt("Inserisci qui il tuo nome");
+// const userName = prompt("Inserisci qui il tuo nome");
 
-const trainJourney = Number(prompt("Inserisci i km del tuo percorso:"));
+// const trainJourney = Number(prompt("Inserisci i km del tuo percorso:"));
 
-const userAge = Number(prompt("Inserisci la tua eta':"));
-
+// const userAge = Number(prompt("Inserisci la tua eta':"));
 const price_per_km = 0.21;
+document.getElementById("generate").addEventListener("click", function () {
+  const user = document.getElementById("userName").value;
+  console.log(user);
+  const km = document.getElementById("trainJourney").value;
+  console.log(km);
+  const age = document.getElementById("userAge").value;
+  console.log(age);
 
-console.log(Number(userAge));
+  let ticket_price = km * price_per_km;
+  console.log(ticket_price);
 
-console.log(Number(trainJourney));
+  let discount = 0;
+
+  if (age < 18) {
+    console.log("sei minorenne, ti faccio il 20% di sconto");
+    discount = ticket_price * 0.2;
+    ticket_price = ticket_price - discount;
+  }
+  if (age > 65) {
+    console.log("sei over 65, ti faccio il 40% di sconto");
+    discount = ticket_price * 0.4;
+    ticket_price = ticket_price - discount;
+  }
+
+  console.log("il prezzo del biglietto = " + ticket_price + " euro");
+
+  let yourTicket =
+    user + "il prezzo del tuo biglietto e' " + ticket_price + " Euro";
+
+  document.getElementById("yourTicket").innerHTML = yourTicket;
+});
+
+// console.log(Number(userAge));
+
+// console.log(Number(trainJourney));
 
 // calcolo il prezzo del biglietto
-let ticket_price = trainJourney * price_per_km;
 
-let discount = 0;
 // calcolo lo sconto minorenni
-
-if (userAge < 18) {
-  console.log("sei minorenne, ti faccio il 20% di sconto");
-  discount = ticket_price * 0.2;
-  ticket_price = ticket_price - discount;
-}
 
 // calcolo lo sconto > 65
 
-if (userAge > 65) {
-  console.log("sei over 65, ti faccio il 40% di sconto");
-  discount = ticket_price * 0.4;
-  ticket_price = ticket_price - discount;
-}
-
-console.log("il prezzo del biglietto = " + ticket_price + " euro");
-
 // stampo in pagina
 
-let ticketPrice =
-  userName + "il prezzo del tuo biglietto e'" + ticket_price + " Euro";
+//
 
-document.getElementById("ticketPrice").innerHTML = ticketPrice;
+// document.getElementById("ticketPrice").innerHTML = ticketPrice;
