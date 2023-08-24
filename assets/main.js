@@ -39,12 +39,12 @@ document.getElementById("generate").addEventListener("click", function () {
 
   let discount = 0;
 
-  if (age < 18) {
+  if (age == "Minorenne") {
     console.log("sei minorenne, ti faccio il 20% di sconto");
     discount = ticket_price * 0.2;
     ticket_price = ticket_price - discount;
   }
-  if (age > 65) {
+  if (age == "Piu' di 65") {
     console.log("sei over 65, ti faccio il 40% di sconto");
     discount = ticket_price * 0.4;
     ticket_price = ticket_price - discount;
