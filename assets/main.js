@@ -25,13 +25,6 @@ Questo richiederà un minimo di ricerca.
 - console.log 
 */
 
-// chiedo i km del viaggio
-
-// const userName = prompt("Inserisci qui il tuo nome");
-
-// const trainJourney = Number(prompt("Inserisci i km del tuo percorso:"));
-
-// const userAge = Number(prompt("Inserisci la tua eta':"));
 const price_per_km = 0.21;
 document.getElementById("generate").addEventListener("click", function () {
   const user = document.getElementById("userName").value;
@@ -60,23 +53,11 @@ document.getElementById("generate").addEventListener("click", function () {
   console.log("il prezzo del biglietto = " + ticket_price + " euro");
 
   let yourTicket =
-    user + "il prezzo del tuo biglietto e' " + ticket_price + " Euro";
+    user + " il prezzo del tuo biglietto e' " + ticket_price + " Euro";
 
+  document.getElementById("name").innerHTML = "Nome e       Cognome: " + user;
+  document.getElementById("journey").innerHTML =
+    "Km da percorrere: " + km + " kilometri";
+  document.getElementById("eta").innerHTML = "Fascia d'eta': " + age;
   document.getElementById("yourTicket").innerHTML = yourTicket;
 });
-
-// console.log(Number(userAge));
-
-// console.log(Number(trainJourney));
-
-// calcolo il prezzo del biglietto
-
-// calcolo lo sconto minorenni
-
-// calcolo lo sconto > 65
-
-// stampo in pagina
-
-//
-
-// document.getElementById("ticketPrice").innerHTML = ticketPrice;
