@@ -57,7 +57,7 @@ document.getElementById("generate").addEventListener("click", function () {
 
   document.getElementById("name").innerHTML = "Nome e       Cognome: " + user;
   document.getElementById("journey").innerHTML =
-    "Km da percorrere: " + km + " kilometri";
+    "Km da percorrere: " + km + " kilometri;";
   document.getElementById("eta").innerHTML = "Fascia d'eta': " + age;
   document.getElementById("yourTicket").innerHTML = yourTicket;
 });

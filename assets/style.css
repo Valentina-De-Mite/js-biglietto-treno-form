@@ -12,3 +12,8 @@
 h2 {
   font-size: 40px;
 }
+
+.pay:hover {
+  background-color: rgba(86, 173, 255, 0.716);
+  color: white;
+}

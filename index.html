@@ -10,27 +10,27 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="b">
 
-    <div class="container text-center pt-4">
+    <div class="container text-center pt-4 pb-5 mt-5 text-bg-primary rounded">
         <h2>Calcola il prezzo del tuo biglietto</h2>
-        <input id="userName" class="m-1 ps-1" placeholder="Nome e Cognome"></input>
-        <input id="trainJourney" class="m-1 ps-1" placeholder="Km da percorrere"></input>
-        <select name="eta'" id="userAge" class="m-1 ps-1">
+        <input id="userName" class="m-1 ps-1 mt-4 rounded border border-1" placeholder="Nome e Cognome"></input>
+        <input id="trainJourney" class="m-1 ps-1 rounded border border-1" placeholder="Km da percorrere"></input>
+        <select name="eta'" id="userAge" class="m-1 ps-1 rounded border border-1">
             <option value="Minorenne"> meno di 18 anni </option>
             <option value="Maggiorenne">piu' di 18 anni</option>
             <option value="Piu' di 65">piu' di 65 anni</option>
         </select>
-        <button id="generate" class="m-1 ps-2 pe-2">Genera</button>
-        <button id="undo" class="m-1 ps-2 pe-2">Annulla</button>
+        <button id="generate" class="m-1 ps-2 pe-2 rounded border border-1">Genera</button>
+        <button id="undo" class="m-1 ps-2 pe-2 rounded border border-1">Annulla</button>
 
 
     </div>
 
 
-    <div class="container text-center pt-4">
+    <div class="container text-center pt-4 pb-5 mt-5 text-bg-primary rounded">
         <h2>Il tuo biglietto</h2>
-        <p>Dettaglio passeggeri</p>
+        <p class="mt-4">Dettaglio passeggeri:</p>
         <div id="name"></div>
         <div id="journey"></div>
         <div id="eta"></div>
@@ -40,8 +40,8 @@
 
     </div>
 
-    <div class="container text-center pt-4">
-        <button class="m-1 ps-2 pe-2">Paga qui</button>
+    <div class="container text-center mt-4 ">
+        <button class="m-1 ps-2 pe-2 rounded border border-3 pay">Paga qui</button>
     </div>
 
 
