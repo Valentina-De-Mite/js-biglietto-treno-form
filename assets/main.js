@@ -59,8 +59,11 @@ if (userAge > 65) {
   ticket_price = ticket_price - discount;
 }
 
-console.log("il prezzo del biglietto = " + ticket_price);
+console.log("il prezzo del biglietto = " + ticket_price + " euro");
 
 // stampo in pagina
 
-ticket_price.innerHTML = +"Euro";
+let ticketPrice =
+  userName + "il prezzo del tuo biglietto e'" + ticket_price + " Euro";
+
+document.getElementById("ticketPrice").innerHTML = ticketPrice;
